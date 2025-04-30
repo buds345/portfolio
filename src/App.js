@@ -35,27 +35,60 @@ const App = () => {
       </header>
 
       {/* Navigation */}
-      <nav className="navbar">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <a href="/resume.pdf" download className="download-link">
-          Download Resume
-        </a>
-      </nav>
+      {/* Navigation */}
+<nav className="navbar">
+  
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#certificates">Certificates</a>
+  
+  <a href="#experience">Work Experience</a>
+
+  <a href="/resume.pdf" download className="download-link">Download Resume</a>
+  <a href="#contact">Contact</a>
+
+  
+</nav>
+
 
       {/* Main Content */}
       <main>
         {/* About Section */}
-        <section id="home" className="about-section">
-          <h2>👋 About Me</h2>
-          <p>
-            I'm a passionate full-stack developer with experience in building
-            interactive web applications, from front-end interfaces to back-end
-            services. I enjoy turning ideas into reality through code.
-          </p>
-        </section>
+      {/* About Section */}
+<section id="home" className="about-section">
+  <h2>👋 About Me</h2>
+  <p>
+    I'm a passionate full-stack developer with experience in building
+    interactive web applications, from front-end interfaces to back-end
+    services. I enjoy turning ideas into reality through code.
+  </p>
+  <p>
+    📚 I hold a <strong>Diploma in ICT</strong> specializing in <strong>Applications Development</strong>.
+  </p>
+</section>
+
+{/* Work Experience Section */}
+<section id="experience" className="experience-section">
+  <h2>💼 Work Experience</h2>
+  <div className="experience-card">
+    <h3>Samsung Training Program</h3>
+    <p><strong>Duration:</strong> 8 Months</p>
+    <p>
+      Participated in an intensive training program focused on <strong>coding, machine learning, and data science</strong>.
+      Worked on real-world projects and developed both technical and analytical problem-solving skills.
+    </p>
+  </div>
+
+  <div className="experience-card">
+    <h3>Software Development Training At CAPACITI</h3>
+    <p><strong>Duration:</strong> 1 Year (Ongoing)</p>
+    <p>
+      Currently undergoing professional software development training. Gaining hands-on experience in
+      <strong> full-stack development</strong>, modern frameworks, and collaborative project environments.
+    </p>
+  </div>
+</section>
+
 
         {/* Projects Section */}
         <section id="projects" className="projects-section">
@@ -115,13 +148,84 @@ const App = () => {
             <span>React</span>
             <span>Node.js</span>
             <span>Express</span>
-            <span>MongoDB</span>
+            <span>FireBase</span>
             <span>JavaScript</span>
             <span>HTML/CSS</span>
-            <span>Git & GitHub</span>
+            <span>GitHub</span>
             <span>Java</span>
+            <span>SQL</span>
+            <span>Python</span>
           </div>
         </section>
+
+       {/* Certificates Section */}
+<section id="certificates" className="certificates-section">
+  <h2>📜 Certificates</h2>
+  <div className="certificates-grid">
+    <div className="certificate-card">
+      <embed src="/certificates/ubbt.pdf" type="application/pdf" width="100%" height="300px" />
+      <p>Emotional Intelligence Certificate</p>
+      <a href="/certificates/ubbt.pdf" download>Download</a>
+    </div>
+
+    <div className="certificate-card">
+      <embed src="/certificates/react-cert.pdf" type="application/pdf" width="100%" height="300px" />
+      <p>React Certificate</p>
+      <a href="/certificates/react-cert.pdf" download>Download</a>
+    </div>
+
+    <div className="certificate-card">
+      <embed src="/certificates/ibm-skillsbuild.pdf" type="application/pdf" width="100%" height="300px" />
+      <p>Python For Data Science Certificate</p>
+      <a href="/certificates/ibm-skillsbuild.pdf" download>Download</a>
+    </div>
+
+    <div className="certificate-card">
+      <embed src="/certificates/gig-cert.pdf" type="application/pdf" width="100%" height="300px" />
+      <p>HTML CSS & Java Certificate</p>
+      <a href="/certificates/gig-cert.pdf" download>Download</a>
+    </div>
+
+    <div className="certificate-card">
+      <embed src="/certificates/digital-cert.pdf" type="application/pdf" width="100%" height="300px" />
+      <p>Digital Skills Certificate</p>
+      <a href="/certificates/digital-cert.pdf" download>Download</a>
+    </div>
+
+    <div className="certificate-card">
+      <embed src="/certificates/coursera.pdf" type="application/pdf" width="100%" height="300px" />
+      <p>Developing Interpersonal Skills Certificate</p>
+      <a href="/certificates/coursera.pdf" download>Download</a>
+    </div>
+
+    <div className="certificate-card">
+      <embed src="/certificates/att.pdf" type="application/pdf" width="100%" height="300px" />
+      <p>HTML CSS & JavaScript Certificate</p>
+      <a href="/certificates/att.pdf" download>Download</a>
+    </div>
+
+    <div className="certificate-card">
+      <embed src="/certificates/alttt.pdf" type="application/pdf" width="100%" height="300px" />
+      <p>Introduction to Python Certificate</p>
+      <a href="/certificates/alttt.pdf" download>Download</a>
+    </div>
+
+    <div className="certificate-card">
+      <embed src="/certificates/altt.pdf" type="application/pdf" width="100%" height="300px" />
+      <p>Writing Professional Emails</p>
+      <a href="/certificates/altt.pdf" download>Download</a>
+    </div>
+
+    <div className="certificate-card">
+      <embed src="/certificates/alt.pdf" type="application/pdf" width="100%" height="300px" />
+      <p>Verbal Communication & Presentation Skills</p>
+      <a href="/certificates/alt.pdf" download>Download</a>
+    </div>
+
+    
+  </div>
+</section>
+
 
         {/* Contact Section */}
         <section id="contact" className="contact-section">
