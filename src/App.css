@@ -1,5 +1,6 @@
 /* Reset and base */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -108,7 +109,7 @@ body, html {
   background-color: lightseagreen;
   border-radius: 12px;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
 /* Work Experience */
@@ -127,13 +128,13 @@ body, html {
   background-color: grey;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 6px 10px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .experience-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Projects */
@@ -147,7 +148,7 @@ body, html {
   padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .project-card a {
@@ -166,7 +167,7 @@ body, html {
   background-color: #FFFFFF;
   border-radius: 12px;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .skills-list {
@@ -181,7 +182,7 @@ body, html {
   background-color: #E0E7FF;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
 }
 
@@ -217,7 +218,7 @@ body, html {
   background-color: #FFFFFF;
   margin-bottom: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .certificate-grid {
@@ -363,10 +364,11 @@ footer {
 }
 
 .project-screenshot {
-  width: 300px;        /* You can adjust this to 250px or 280px if needed */
+  width: 300px;
+  /* You can adjust this to 250px or 280px if needed */
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
   transition: transform 0.3s ease;
 }
@@ -377,7 +379,8 @@ footer {
 
 
 .about-card {
-  background-color: navy; /* Light cyan frame */
+  background-color: lightblue;
+  /* Light cyan frame */
   border: 2px solid #00acc1;
   padding: 20px;
   border-radius: 15px;
@@ -386,12 +389,14 @@ footer {
 }
 
 .experience-card.exp1 {
-  background-color: #fff3e0; /* Light orange */
+  background-color: #fff3e0;
+  /* Light orange */
   border: 2px solid #ffb74d;
 }
 
 .experience-card.exp2 {
-  background-color: #f3e5f5; /* Lavender */
+  background-color: #f3e5f5;
+  /* Lavender */
   border: 2px solid #ba68c8;
 }
 
@@ -400,5 +405,3 @@ footer {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
