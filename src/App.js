@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import emailjs from "emailjs-com";
 import {
   FaReact, FaNodeJs, FaPython, FaJava, FaHtml5, FaCss3Alt,
   FaJs, FaGithub
@@ -13,6 +14,26 @@ const App = () => {
 
   const toggleModal = () => setShowModal(!showModal);
   const toggleCertificates = () => setShowAllCertificates(!showAllCertificates);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_7dzaajo',
+      'template_njfe2a9',
+      e.target,
+      'UNJuky8z2tgIwOW77'
+    ).then(
+      (result) => {
+        alert("Message sent successfully!");
+      },
+      (error) => {
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    );
+
+    e.target.reset();
+  };
 
   const allSkills = [
     { name: "React", icon: <FaReact color="#61DBFB" /> },
@@ -39,7 +60,8 @@ const App = () => {
     { src: "/certificates/att.pdf", label: "HTML CSS & JavaScript" },
     { src: "/certificates/alttt.pdf", label: "Intro to Python" },
     { src: "/certificates/altt.pdf", label: "Professional Emails" },
-    { src: "/certificates/alt.pdf", label: "Verbal & Presentation Skills" }
+    { src: "/certificates/alt.pdf", label: "Verbal & Presentation Skills" },
+    { src: "/certificates/aiw.pdf", label: "Node.js & Express" }
   ];
 
   const visibleCertificates = showAllCertificates
@@ -90,44 +112,58 @@ const App = () => {
 
       {/* About */}
       <section id="home" className="about-section">
-        <h2>👋 About Me</h2>
-        <p>
-          I'm a passionate full-stack developer with experience in building interactive web apps.
-        </p>
-        <p>
-          📚 I hold a <strong>Diploma in ICT</strong> specializing in <strong>Applications Development</strong>.
-        </p>
-      </section>
+  <h2>👋 About Me</h2>
+  <div className="about-card">
+    <p>
+      Hello! I'm <strong>Banele Xhamlashe</strong>, a passionate and driven Full-Stack Developer based in the Eastern Cape. I specialize in building modern, interactive, and responsive web applications that solve real-world problems.
+    </p>
+    <p>
+      🎓 I recently completed my <strong>Diploma in Information and Communication Technology</strong> specializing in <strong>Applications Development</strong> at <strong>Walter Sisulu University</strong> in 2024.
+    </p>
+    <p>
+      🚀 I'm constantly expanding my knowledge in areas like AI, cloud technologies, and system design. Whether working solo or in a team, I thrive in fast-paced environments where creative problem-solving is key.
+    </p>
+  </div>
+</section>
+
+
 
       {/* Work Experience */}
       <section id="experience" className="experience-section">
-        <h2>💼 Work Experience</h2>
-        <div className="experience-grid">
-          <div className="experience-card exp1">
-            <h3>Samsung Training Program</h3>
-            <p><strong>Duration:</strong> 8 Months</p>
-            <p>Focused on coding, machine learning, and real-world projects.</p>
-          </div>
-          <div className="experience-card exp2">
-            <h3>Software Development at CAPACITI</h3>
-            <p><strong>Duration:</strong> 1 Year (Ongoing)</p>
-            <p>Hands-on full-stack experience in real project environments.</p>
-          </div>
-        </div>
-      </section>
+  <h2>💼 Work Experience</h2>
+  <div className="experience-grid">
+    <div className="experience-card exp1">
+      <h3>Samsung IT & Coding Academy</h3>
+      <p><strong>Duration:</strong> 8 Months</p>
+      <p>
+        Completed an intensive program focusing on <strong>software development</strong>, <strong>machine learning</strong>, and practical industry-ready coding skills. Built multiple real-world projects in a team-based setting.
+      </p>
+    </div>
+    <div className="experience-card exp2">
+      <h3>Software Developer Intern – CAPACITI</h3>
+      <p><strong>Duration:</strong> 1 Year (Ongoing)</p>
+      <p>
+        Gained hands-on full-stack development experience working with modern tech stacks. Contributed to live projects using React, Node.js, and SQL, while refining project planning and agile methodology skills.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Projects */}
       <section id="projects" className="projects-section">
         <h2>💼 Featured Projects</h2>
         <div className="project-card">
           <h3>Developer Chatroom</h3>
+          <img src="/images/chatroom.PNG" alt="Chatroom Screenshot" className="project-screenshot" />
           <p>Real-time collaboration platform for developers.</p>
           <a href="https://zippy-gelato-c01893.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Project</a>
         </div>
         <div className="project-card">
           <h3>Jewellery Website</h3>
-          <p>Responsive e-commerce website for jewellery.</p>
-          <a href="https://your-jewellery-site.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Project</a>
+          <img src="/images/jewellery website.PNG" alt="Jewellery Website Screenshot" className="project-screenshot" />
+          <p>Responsive  website for jewellery watches.</p>
+          <a href="https://buds345.github.io/Home-Page/" target="_blank" rel="noopener noreferrer">Visit Project</a>
         </div>
       </section>
 
@@ -166,7 +202,13 @@ const App = () => {
       {/* Contact */}
       <section id="contact" className="contact-section">
         <h2>📬 Contact</h2>
-        <p>Email: <a href="mailto:banelebanele938@gmail.com">banelebanele938@gmail.com</a></p>
+        <form onSubmit={sendEmail} className="contact-form">
+          <input type="text" name="from_name" placeholder="Your Name" required />
+          <input type="email" name="reply_to" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="4" required />
+          <button type="submit" className="submit-btn">Send Message</button>
+        </form>
+
         <div className="social-links">
           <a href="https://github.com/buds345" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://linkedin.com/in/banele-xhamlashe" target="_blank" rel="noopener noreferrer">LinkedIn</a>
