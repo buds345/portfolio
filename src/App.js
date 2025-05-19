@@ -112,42 +112,42 @@ const App = () => {
 
       {/* About */}
       <section id="home" className="about-section">
-  <h2>👋 About Me</h2>
-  <div className="about-card">
-    <p>
-      Hello! I'm <strong>Banele Xhamlashe</strong>, a passionate and driven Full-Stack Developer based in the Eastern Cape. I specialize in building modern, interactive, and responsive web applications that solve real-world problems.
-    </p>
-    <p>
-      🎓 I recently completed my <strong>Diploma in Information and Communication Technology</strong> specializing in <strong>Applications Development</strong> at <strong>Walter Sisulu University</strong> in 2024.
-    </p>
-    <p>
-      🚀 I'm constantly expanding my knowledge in areas like AI, cloud technologies, and system design. Whether working solo or in a team, I thrive in fast-paced environments where creative problem-solving is key.
-    </p>
-  </div>
-</section>
+        <h2>👋 About Me</h2>
+        <div className="about-card">
+          <p>
+            Hello! I'm <strong>Banele Xhamlashe</strong>, a passionate and driven Full-Stack Developer based in the Eastern Cape. I specialize in building modern, interactive, and responsive web applications that solve real-world problems.
+          </p>
+          <p>
+            🎓 I recently completed my <strong>Diploma in Information and Communication Technology</strong> specializing in <strong>Applications Development</strong> at <strong>Walter Sisulu University</strong> in 2024.
+          </p>
+          <p>
+            🚀 I'm constantly expanding my knowledge in areas like AI, cloud technologies, and system design. Whether working solo or in a team, I thrive in fast-paced environments where creative problem-solving is key.
+          </p>
+        </div>
+      </section>
 
 
 
       {/* Work Experience */}
       <section id="experience" className="experience-section">
-  <h2>💼 Work Experience</h2>
-  <div className="experience-grid">
-    <div className="experience-card exp1">
-      <h3>Samsung IT & Coding Academy</h3>
-      <p><strong>Duration:</strong> 8 Months</p>
-      <p>
-        Completed an intensive program focusing on <strong>software development</strong>, <strong>machine learning</strong>, and practical industry-ready coding skills. Built multiple real-world projects in a team-based setting.
-      </p>
-    </div>
-    <div className="experience-card exp2">
-      <h3>Software Developer Intern – CAPACITI</h3>
-      <p><strong>Duration:</strong> 1 Year (Ongoing)</p>
-      <p>
-        Gained hands-on full-stack development experience working with modern tech stacks. Contributed to live projects using React, Node.js, and SQL, while refining project planning and agile methodology skills.
-      </p>
-    </div>
-  </div>
-</section>
+        <h2>💼 Work Experience</h2>
+        <div className="experience-grid">
+          <div className="experience-card exp1">
+            <h3>Samsung Training Programme</h3>
+            <p><strong>Duration:</strong> 8 Months</p>
+            <p>
+              Completed an intensive program focusing on <strong>software development</strong>, <strong>machine learning</strong>, and practical industry-ready coding skills. Built multiple real-world projects in a team-based setting.
+            </p>
+          </div>
+          <div className="experience-card exp2">
+            <h3>Software Development Training – CAPACITI</h3>
+            <p><strong>Duration:</strong> 1 Year (Ongoing)</p>
+            <p>
+              Gained hands-on full-stack development experience working with modern tech stacks. Contributed to live projects using React, Node.js, and SQL, while refining project planning and agile methodology skills.
+            </p>
+          </div>
+        </div>
+      </section>
 
 
       {/* Projects */}
