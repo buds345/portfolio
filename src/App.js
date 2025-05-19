@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import emailjs from "emailjs-com";
 import {
   FaReact, FaNodeJs, FaPython, FaJava, FaHtml5, FaCss3Alt,
-  FaJs, FaGithub
+  FaJs, FaGithub, FaBars, FaTimes
 } from "react-icons/fa";
 import { SiFirebase, SiMysql } from "react-icons/si";
 
@@ -11,9 +11,36 @@ const App = () => {
   const [showModal, setShowModal] = useState(false);
   const [showAllCertificates, setShowAllCertificates] = useState(false);
   const [showAllSkills, setShowAllSkills] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleModal = () => setShowModal(!showModal);
   const toggleCertificates = () => setShowAllCertificates(!showAllCertificates);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Set initial state
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const handleNavClick = (id) => {
+    if (isMobile) setMenuOpen(false);
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const yOffset = -80; // Adjust for fixed navbar height
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }, 0);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -81,16 +108,37 @@ const App = () => {
           />
           <span className="nav-name">Banele Xhamlashe</span>
         </div>
-        <div className="navbar-links">
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#certificates">Certificates</a>
-          <a href="#experience">Work Experience</a>
-          <a href="/resume.pdf" download className="download-link">
-            Download Resume
-          </a>
-          <a href="#contact">Contact</a>
-        </div>
+
+        {isMobile ? (
+          <>
+            <button className="burger-menu" onClick={() => setMenuOpen(!menuOpen)}>
+              {menuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+            {menuOpen && (
+              <div className="mobile-menu">
+                <a href="#projects" onClick={() => handleNavClick('projects')}>Projects</a>
+                <a href="#skills" onClick={() => handleNavClick('skills')}>Skills</a>
+                <a href="#certificates" onClick={() => handleNavClick('certificates')}>Certificates</a>
+                <a href="#experience" onClick={() => handleNavClick('experience')}>Work Experience</a>
+                <a href="/resume.pdf" download className="download-link" onClick={() => setMenuOpen(false)}>
+                  Download Resume
+                </a>
+                <a href="#contact" onClick={() => handleNavClick('contact')}>Contact</a>
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="navbar-links">
+            <a href="#projects" onClick={() => handleNavClick('projects')}>Projects</a>
+            <a href="#skills" onClick={() => handleNavClick('skills')}>Skills</a>
+            <a href="#certificates" onClick={() => handleNavClick('certificates')}>Certificates</a>
+            <a href="#experience" onClick={() => handleNavClick('experience')}>Work Experience</a>
+            <a href="/resume.pdf" download className="download-link">
+              Download Resume
+            </a>
+            <a href="#contact" onClick={() => handleNavClick('contact')}>Contact</a>
+          </div>
+        )}
       </nav>
 
       {/* Modal */}
@@ -126,8 +174,6 @@ const App = () => {
         </div>
       </section>
 
-
-
       {/* Work Experience */}
       <section id="experience" className="experience-section">
         <h2>💼 Work Experience</h2>
@@ -149,7 +195,6 @@ const App = () => {
         </div>
       </section>
 
-
       {/* Projects */}
       <section id="projects" className="projects-section">
         <h2>💼 Featured Projects</h2>
@@ -162,7 +207,7 @@ const App = () => {
         <div className="project-card">
           <h3>Jewellery Website</h3>
           <img src="/images/jewellery website.PNG" alt="Jewellery Website Screenshot" className="project-screenshot" />
-          <p>Responsive  website for jewellery watches.</p>
+          <p>Responsive website for jewellery watches.</p>
           <a href="https://buds345.github.io/Home-Page/" target="_blank" rel="noopener noreferrer">Visit Project</a>
         </div>
       </section>
