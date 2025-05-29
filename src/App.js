@@ -345,7 +345,7 @@ const App = () => {
 
         <div className="social-links">
           <a href="https://github.com/buds345" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/banele-xhamlashe" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://linkedin.com/in/banele-xhamlashe-888316331" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </section>
 
