@@ -207,10 +207,10 @@ const App = () => {
       🎓 I hold a <strong>Diploma in Information and Communication Technology</strong> with a specialization in <strong>Applications Development</strong>, completed at <strong>Walter Sisulu University</strong> in 2024. I’ve also completed an intensive 8-month <strong>Samsung Advanced Technology Training Program</strong>, which sharpened my skills in software engineering, hardware troubleshooting, and mobile app development.
     </p>
     <p>
-      💻 My technical stack includes <strong>Java, Kotlin, Python, React, Tailwind CSS, Firebase, SQL, VB.NET</strong>, and even <strong>MIPS Assembly</strong>. I enjoy building everything from clean user interfaces to powerful backend systems.
+      💻 My technical stack includes <strong>Java, Python, React, HTML CSS & JavaScript, Firebase, SQL, VB.NET</strong>, and even <strong>MIPS Assembly</strong>. I enjoy building everything from clean user interfaces to powerful backend systems.
     </p>
     <p>
-      🚀 I have a strong passion for <strong>Artificial Intelligence, cloud computing, and system design</strong>. I'm naturally curious and love learning new technologies and frameworks. My goal is to grow as a developer and contribute to projects that make a meaningful difference.
+      🚀 I have a strong passion for <strong>Artificial Intelligence and system design</strong>. I'm naturally curious and love learning new technologies and frameworks. My goal is to grow as a developer and contribute to projects that make a meaningful difference.
     </p>
     <p>
       🛠️ I’ve participated in hackathon Telkom learn that took place in 2024 in East London and I’m always seeking opportunities to collaborate, innovate, and elevate my craft.
@@ -231,7 +231,7 @@ const App = () => {
   <div className="experience-grid">
     
     <div className="experience-card exp1">
-      <h3>Samsung Advanced Training Programme</h3>
+      <h3>Samsung Training Programme</h3>
       <p><strong>Duration:</strong> 8 Months (Completed)</p>
       <p>
         Completed an intensive, hands-on training program focused on <strong>software development, mobile app creation, Machine Learning</strong>, and <strong>Deep Learning</strong>. 
@@ -242,8 +242,7 @@ const App = () => {
       <p>
         Highlights:
         <ul>
-          <li>Built a working Android application using Kotlin and Firebase</li>
-          <li>Practiced troubleshooting and maintenance on Samsung devices</li>
+          <li>Built a BCMM APP for BCM Residents to have communication platform with their municipality</li>
           <li>Participated in coding sprints and collaborative debugging sessions</li>
         </ul>
       </p>
@@ -356,5 +355,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
