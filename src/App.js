@@ -87,14 +87,14 @@ const App = () => {
       e.target,
       "UNJuky8z2tgIwOW77"
     )
-    .then(
-      (result) => {
-        alert("Message sent successfully!");
-      },
-      (error) => {
-        alert("Oops! Something went wrong. Please try again.");
-      }
-    );
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          alert("Oops! Something went wrong. Please try again.");
+        }
+      );
     e.target.reset();
   };
 
@@ -124,7 +124,13 @@ const App = () => {
     { src: "/certificates/alttt.pdf", label: "Intro to Python" },
     { src: "/certificates/altt.pdf", label: "Professional Emails" },
     { src: "/certificates/alt.pdf", label: "Verbal & Presentation Skills" },
-    { src: "/certificates/aiw.pdf", label: "Node.js & Express" }
+    { src: "/certificates/aiw.pdf", label: "Node.js & Express" },
+    // Adding the new certificates from your folder
+    { src: "/certificates/BaneleGIG.pdf", label: "Intro to Machine Learning on AWS" },
+    { src: "/certificates/BaneleGIGG.pdf", label: "Machine Learning with Python" },
+    { src: "/certificates/Coursera G8QY2I8RRKJW.pdf", label: "Intro to Responsible Ai" },
+    { src: "/certificates/Coursera TQR3WIHKB9AK.pdf", label: "Programming with Java" },
+    { src: "/certificates/aiw.pdf", label: "Developing Back-end Apps with Node.js & express" }
   ];
 
   const visibleCertificates = showAllCertificates
@@ -193,90 +199,96 @@ const App = () => {
         <p>Full-Stack Developer | Problem Solver | Tech Enthusiast</p>
       </header>
 
-      <section 
-  id="home" 
-  ref={(el) => (sectionRefs.current["home"] = el)}
-  className={`about-section ${activeSection === "home" ? "active-section" : ""}`}
->
-  <h2>👋 About Me</h2>
-  <div className="about-card">
-    <p>
-      Hello! I'm <strong>Banele Xhamlashe</strong>, a passionate and driven Full-Stack Developer from  Eastern Cape, South Africa. I'm deeply committed to creating digital solutions that solve real-world problems and make a positive impact in people's lives.
-    </p>
-    <p>
-      🎓 I hold a <strong>Diploma in Information and Communication Technology</strong> with a specialization in <strong>Applications Development</strong>, completed at <strong>Walter Sisulu University</strong> in 2024. I’ve also completed an intensive 8-month <strong>Samsung Advanced Technology Training Program</strong>, which sharpened my skills in software engineering, hardware troubleshooting, and mobile app development.
-    </p>
-    <p>
-      💻 My technical stack includes <strong>Java, Python, React, HTML CSS & JavaScript, Firebase, SQL, VB.NET</strong>, and even <strong>MIPS Assembly</strong>. I enjoy building everything from clean user interfaces to powerful backend systems.
-    </p>
-    <p>
-      🚀 I have a strong passion for <strong>Artificial Intelligence and system design</strong>. I'm naturally curious and love learning new technologies and frameworks. My goal is to grow as a developer and contribute to projects that make a meaningful difference.
-    </p>
-    <p>
-      🛠️ I’ve participated in hackathon Telkom learn that took place in 2024 in East London and I’m always seeking opportunities to collaborate, innovate, and elevate my craft.
-    </p>
-    <p>
-      Let's build the future, one line of code at a time. 🌍✨
-    </p>
-  </div>
-</section>
+      <section
+        id="home"
+        ref={(el) => (sectionRefs.current["home"] = el)}
+        className={`about-section ${activeSection === "home" ? "active-section" : ""}`}
+      >
+        <h2>👋 About Me</h2>
+        <div className="about-card">
+          <p>
+            Hello! I'm <strong>Banele Xhamlashe</strong>, a passionate and driven Full-Stack Developer from  Eastern Cape, South Africa. I'm deeply committed to creating digital solutions that solve real-world problems and make a positive impact in people's lives.
+          </p>
+          <p>
+            🎓 I hold a <strong>Diploma in Information and Communication Technology</strong> with a specialization in <strong>Applications Development</strong>, completed at <strong>Walter Sisulu University</strong> in 2024. I've also completed an intensive 8-month <strong>Samsung Advanced Technology Training Program</strong>, which sharpened my skills in software engineering, hardware troubleshooting, and mobile app development.
+          </p>
+          <p>
+            💻 My technical stack includes <strong>Java, Python, React, HTML CSS & JavaScript, Firebase, SQL, VB.NET</strong>, and even <strong>MIPS Assembly</strong>. I enjoy building everything from clean user interfaces to powerful backend systems.
+          </p>
+          <p>
+            🚀 I have a strong passion for <strong>Artificial Intelligence and system design</strong>. I'm naturally curious and love learning new technologies and frameworks. My goal is to grow as a developer and contribute to projects that make a meaningful difference.
+          </p>
+          <p>
+            🛠️ I've participated in hackathon Telkom learn that took place in 2024 in East London and I'm always seeking opportunities to collaborate, innovate, and elevate my craft.
+          </p>
+          <p>
+            Let's build the future, one line of code at a time. 🌍✨
+          </p>
+        </div>
+      </section>
 
 
-<section 
-  id="experience" 
-  ref={(el) => (sectionRefs.current["experience"] = el)}
-  className={`experience-section ${activeSection === "experience" ? "active-section" : ""}`}
->
-  <h2>💼 Work Experience</h2>
-  <div className="experience-grid">
-    
-    <div className="experience-card exp1">
-      <h3>Samsung Training Programme</h3>
-      <p><strong>Duration:</strong> 8 Months (Completed)</p>
-      <p>
-        Completed an intensive, hands-on training program focused on <strong>software development, mobile app creation, Machine Learning</strong>, and <strong>Deep Learning</strong>. 
-      </p>
-      <p>
-        Developed multiple real-world applications, learned advanced coding practices, and gained exposure to software integration. The program included team-based projects, daily coding challenges, and soft-skills development.
-      </p>
-      <p>
-        Highlights:
-        <ul>
-          <li>Built a BCMM APP for BCM Residents to have communication platform with their municipality</li>
-          <li>Participated in coding sprints and collaborative debugging sessions</li>
-        </ul>
-      </p>
-    </div>
+      <section
+        id="experience"
+        ref={(el) => (sectionRefs.current["experience"] = el)}
+        className={`experience-section ${activeSection === "experience" ? "active-section" : ""}`}
+      >
+        <h2>💼 Work Experience</h2>
+        <div className="experience-grid">
 
-    <div className="experience-card exp2">
-      <h3>Software Development Training – CAPACITI</h3>
-      <p><strong>Duration:</strong> 1 Year (Ongoing)</p>
-      <p>
-        Actively enrolled in a full-time training programme by <strong>CAPACITI</strong>, enhancing my skills in <strong>full-stack web development</strong>, <strong>Agile methodology</strong>, and <strong>project-based learning</strong>.
-      </p>
-      <p>
-        We are developing real-world apps using technologies like React, Node.js, Express, and Firebase.
-      </p>
-      <p>
-        Highlights:
-        <ul>
-          <li>Collaborated on a task management system with real-time updates</li>
-          <li>Engaged in group projects simulating real client scenarios</li>
-          <li>Learned effective debugging, testing, and deployment strategies</li>
-        </ul>
-      </p>
-    </div>
+          <div className="experience-card exp1">
+            <h3>Samsung Training Programme</h3>
+            <p><strong>Duration:</strong> 8 Months (Completed)</p>
+            <p>
+              Completed an intensive, hands-on training program focused on <strong>software development, mobile app creation, Machine Learning</strong>, and <strong>Deep Learning</strong>.
+            </p>
+            <p>
+              Developed multiple real-world applications, learned advanced coding practices, and gained exposure to software integration. The program included team-based projects, daily coding challenges, and soft-skills development.
+            </p>
+            <p>
+              Highlights:
+              <ul>
+                <li>Built a BCMM APP for BCM Residents to have communication platform with their municipality</li>
+                <li>Participated in coding sprints and collaborative debugging sessions</li>
+              </ul>
+            </p>
+          </div>
 
-  </div>
-</section>
+          <div className="experience-card exp2">
+            <h3>Software Development Training – CAPACITI</h3>
+            <p><strong>Duration:</strong> 1 Year (Ongoing)</p>
+            <p>
+              Actively enrolled in a full-time training programme by <strong>CAPACITI</strong>, enhancing my skills in <strong>full-stack web development</strong>, <strong>Agile methodology</strong>, and <strong>project-based learning</strong>.
+            </p>
+            <p>
+              We are developing real-world apps using technologies like React, Node.js, Express, and Firebase.
+            </p>
+            <p>
+              Highlights:
+              <ul>
+                <li>Collaborated on a task management system with real-time updates</li>
+                <li>Engaged in group projects simulating real client scenarios</li>
+                <li>Learned effective debugging, testing, and deployment strategies</li>
+              </ul>
+            </p>
+          </div>
 
-      <section 
-        id="projects" 
+        </div>
+      </section>
+
+      <section
+        id="projects"
         ref={(el) => (sectionRefs.current["projects"] = el)}
         className={`projects-section ${activeSection === "projects" ? "active-section" : ""}`}
       >
         <h2>💼 Featured Projects</h2>
         <div className="projects-container">
+          <div className="project-card">
+            <h3>Marketing Copy Generator</h3>
+            <img src="/images/MARKETING GENERATOR.JPG" alt="Marketing Generator Screenshot" className="project-screenshot" />
+            <p>AI-powered marketing copy generator for social media posts and promotional content.</p>
+            <a href="https://marketing-generator-2.onrender.com/" target="_blank" rel="noopener noreferrer">Visit Project</a>
+          </div>
           <div className="project-card">
             <h3>Developer Chatroom</h3>
             <img src="/images/chatroom.PNG" alt="Chatroom Screenshot" className="project-screenshot" />
@@ -292,8 +304,8 @@ const App = () => {
         </div>
       </section>
 
-      <section 
-        id="skills" 
+      <section
+        id="skills"
         ref={(el) => (sectionRefs.current["skills"] = el)}
         className={`skills-section ${activeSection === "skills" ? "active-section" : ""}`}
       >
@@ -311,8 +323,8 @@ const App = () => {
         </button>
       </section>
 
-      <section 
-        id="certificates" 
+      <section
+        id="certificates"
         ref={(el) => (sectionRefs.current["certificates"] = el)}
         className={`certificates-section ${activeSection === "certificates" ? "active-section" : ""}`}
       >
@@ -330,8 +342,8 @@ const App = () => {
         </button>
       </section>
 
-      <section 
-        id="contact" 
+      <section
+        id="contact"
         ref={(el) => (sectionRefs.current["contact"] = el)}
         className={`contact-section ${activeSection === "contact" ? "active-section" : ""}`}
       >
