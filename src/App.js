@@ -210,7 +210,7 @@ const App = () => {
             Hello! I'm <strong>Banele Xhamlashe</strong>, a passionate and driven Full-Stack Developer from  Eastern Cape, South Africa. I'm deeply committed to creating digital solutions that solve real-world problems and make a positive impact in people's lives.
           </p>
           <p>
-            🎓 I hold a <strong>Diploma in Information and Communication Technology</strong> with a specialization in <strong>Applications Development</strong>, completed at <strong>Walter Sisulu University</strong> in 2024. I've also completed an intensive 8-month <strong>Samsung Advanced Technology Training Program</strong>, which sharpened my skills in software engineering, hardware troubleshooting, and mobile app development.
+            🎓 I hold a <strong>Diploma in Information and Communication Technology</strong> with a specialization in <strong>Applications Development</strong>, completed at <strong>Walter Sisulu University</strong> in 2024. I've also completed an intensive 8-month <strong>Samsung Advanced Technology Training Program</strong>, which sharpened my skills in software engineering and mobile app development.
           </p>
           <p>
             💻 My technical stack includes <strong>Java, Python, React, HTML CSS & JavaScript, Firebase, SQL, VB.NET</strong>, and even <strong>MIPS Assembly</strong>. I enjoy building everything from clean user interfaces to powerful backend systems.
