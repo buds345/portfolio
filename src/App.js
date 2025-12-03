@@ -3,7 +3,7 @@ import "./App.css";
 import emailjs from "emailjs-com";
 import {
   FaReact, FaNodeJs, FaPython, FaJava, FaHtml5, FaCss3Alt,
-  FaJs, FaGithub, FaBars, FaTimes
+  FaJs, FaGithub, FaBars, FaTimes, FaFilePdf, FaExternalLinkAlt
 } from "react-icons/fa";
 import { SiFirebase, SiMysql } from "react-icons/si";
 
@@ -37,7 +37,7 @@ const App = () => {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.6, // 60% of section visible
+        threshold: 0.6,
       }
     );
 
@@ -114,10 +114,10 @@ const App = () => {
   const visibleSkills = showAllSkills ? allSkills : allSkills.slice(0, 3);
 
   const allCertificates = [
-    { src: "/certificates/ubbt.pdf", label: "Emotional Intelligence" },
-    { src: "/certificates/react-cert.pdf", label: "React" },
-    { src: "/certificates/ibm-skillsbuild.pdf", label: "Python For Data Science" },
-    { src: "/certificates/gig-cert.pdf", label: "HTML CSS & Java" },
+    
+    { src: "/certificates/react-cert.pdf", label: "React Certification" },
+    
+    
     { src: "/certificates/digital-cert.pdf", label: "Digital Skills" },
     { src: "/certificates/coursera.pdf", label: "Interpersonal Skills" },
     { src: "/certificates/att.pdf", label: "HTML CSS & JavaScript" },
@@ -125,7 +125,6 @@ const App = () => {
     { src: "/certificates/altt.pdf", label: "Professional Emails" },
     { src: "/certificates/alt.pdf", label: "Verbal & Presentation Skills" },
     { src: "/certificates/aiw.pdf", label: "Node.js & Express" },
-    // Adding the new certificates from your folder
     { src: "/certificates/BaneleGIG.pdf", label: "Intro to Machine Learning on AWS" },
     { src: "/certificates/BaneleGIGG.pdf", label: "Machine Learning with Python" },
     { src: "/certificates/Coursera G8QY2I8RRKJW.pdf", label: "Intro to Responsible Ai" },
@@ -207,7 +206,7 @@ const App = () => {
         <h2>👋 About Me</h2>
         <div className="about-card">
           <p>
-            Hello! I'm <strong>Banele Xhamlashe</strong>, a passionate and driven Full-Stack Developer from  Eastern Cape, South Africa. I'm deeply committed to creating digital solutions that solve real-world problems and make a positive impact in people's lives.
+            Hello! I'm <strong>Banele Xhamlashe</strong>, a passionate and driven Full-Stack Developer from Eastern Cape, South Africa. I'm deeply committed to creating digital solutions that solve real-world problems and make a positive impact in people's lives.
           </p>
           <p>
             🎓 I hold a <strong>Diploma in Information and Communication Technology</strong> with a specialization in <strong>Applications Development</strong>, completed at <strong>Walter Sisulu University</strong> in 2024. I've also completed an intensive 8-month <strong>Samsung Advanced Technology Training Program</strong>, which sharpened my skills in software engineering and mobile app development.
@@ -227,7 +226,6 @@ const App = () => {
         </div>
       </section>
 
-
       <section
         id="experience"
         ref={(el) => (sectionRefs.current["experience"] = el)}
@@ -235,7 +233,6 @@ const App = () => {
       >
         <h2>💼 Work Experience</h2>
         <div className="experience-grid">
-
           <div className="experience-card exp1">
             <h3>Samsung Training Programme</h3>
             <p><strong>Duration:</strong> 8 Months (Completed)</p>
@@ -272,7 +269,6 @@ const App = () => {
               </ul>
             </p>
           </div>
-
         </div>
       </section>
 
@@ -284,10 +280,10 @@ const App = () => {
         <h2>💼 Featured Projects</h2>
         <div className="projects-container">
           <div className="project-card">
-            <h3>Marketing Copy Generator</h3>
-            <img src="/images/MARKETING GENERATOR.JPG" alt="Marketing Generator Screenshot" className="project-screenshot" />
-            <p>AI-powered marketing copy generator for social media posts and promotional content.</p>
-            <a href="https://marketing-generator-2.onrender.com/" target="_blank" rel="noopener noreferrer">Visit Project</a>
+            <h3>Digital Help Desk</h3>
+            <img src="/images/MARKETING GENERATOR.JPG" alt="Digital Help Desk" className="project-screenshot" />
+            <p>Digital Help Desk</p>
+            <a href="https://smsolutionspe.co.za/app/client-login" target="_blank" rel="noopener noreferrer">Visit Project</a>
           </div>
           <div className="project-card">
             <h3>Developer Chatroom</h3>
@@ -332,8 +328,20 @@ const App = () => {
         <div className="certificate-grid">
           {visibleCertificates.map((cert, index) => (
             <div className="certificate-card" key={index}>
-              <iframe src={cert.src} className="certificate-pdf" title={cert.label}></iframe>
-              <p>{cert.label}</p>
+              <div className="certificate-icon">
+                <FaFilePdf size={48} color="#e74c3c" />
+              </div>
+              <div className="certificate-info">
+                <h3>{cert.label}</h3>
+                <a 
+                  href={cert.src} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="view-certificate-btn"
+                >
+                  <FaExternalLinkAlt /> View Certificate
+                </a>
+              </div>
             </div>
           ))}
         </div>
@@ -367,4 +375,5 @@ const App = () => {
     </div>
   );
 };
+
 export default App;
