@@ -235,7 +235,7 @@ const App = () => {
         <div className="experience-grid">
           <div className="experience-card exp1">
             <h3>Samsung Training Programme</h3>
-            <p><strong>Duration:</strong> 8 Months (Completed)</p>
+            <p><strong>Duration:</strong> April 2024 - December 2024</p>
             <p>
               Completed an intensive, hands-on training program focused on <strong>software development, mobile app creation, Machine Learning</strong>, and <strong>Deep Learning</strong>.
             </p>
@@ -253,7 +253,7 @@ const App = () => {
 
           <div className="experience-card exp2">
             <h3>Software Development Training – CAPACITI</h3>
-            <p><strong>Duration:</strong> 1 Year (Ongoing)</p>
+            <p><strong>Duration:</strong> January 2025 - December 2025</p>
             <p>
               Actively enrolled in a full-time training programme by <strong>CAPACITI</strong>, enhancing my skills in <strong>full-stack web development</strong>, <strong>Agile methodology</strong>, and <strong>project-based learning</strong>.
             </p>
