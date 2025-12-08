@@ -235,7 +235,7 @@ const App = () => {
         <div className="experience-grid">
           <div className="experience-card exp1">
             <h3>Samsung Training Programme</h3>
-            <p><strong>Duration:</strong> April 2024 - December 2024(8 months)</p>
+            <p><strong>Duration:</strong> April 2024 - November 2024(8 months)</p>
             <p>
               Completed an intensive, hands-on training program focused on <strong>software development, mobile app creation, Machine Learning</strong>, and <strong>Deep Learning</strong>.
             </p>
